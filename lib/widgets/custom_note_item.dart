@@ -7,13 +7,14 @@ class NoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
+     
       padding: const EdgeInsets.only(top: 24,bottom: 24,left: 16,),
       decoration: BoxDecoration(
-        color: Colors.yellow,
+        color: Colors.orange,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
+        
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
@@ -44,8 +45,8 @@ class NoteItem extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-          ),
-        ],
+           ),
+       ], 
       ),
     );
   }
