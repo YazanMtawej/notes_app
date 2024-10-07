@@ -1,3 +1,14 @@
+
+// import 'package:flutter/material.dart';
+
+// class AddNoteForm extends StatefulWidget{
+//   const AddNoteForm({
+//     Key? key,
+//   }):super(key: key);
+// }
+// @override
+// State<AddNoteForm> createState() => _AddNoteFormState();
+
 // class _AddNoteFormState extends State<AddNoteForm>{
 //   final GlobalKey<FormState> formKey=GlobalKey();
 //   AutovalidateMode  autovalidateMode =  AutovalidateMode.disabled;
@@ -21,7 +32,7 @@
 //                CustomTextField(
 //            onSaved: (value){
 //               subTitle = value;
-//             } 
+//             } ,
 //             hint: 'content',
 //             maxLines: 5,),
 //               const SizedBox(height: 32,),
