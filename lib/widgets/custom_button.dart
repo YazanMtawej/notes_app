@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
+// ignore: must_be_immutable
 class CustomButton extends StatelessWidget {
-  CustomButton({super.key, required Null Function() onTap});
-  VoidCallback? onTap;
+const  CustomButton({super.key, this.onTap,  this.isloading=false});
+  final void Function()? onTap;
+  final bool isloading;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -13,8 +15,12 @@ class CustomButton extends StatelessWidget {
         height: 55,
         decoration: BoxDecoration(
             color: kPrimaryColor, borderRadius: BorderRadius.circular(16)),
-        child: const Center(
-          child: Text(
+        child: Center(
+          child: isloading 
+          ? const CircularProgressIndicator(
+            color: Colors.black,
+          ) 
+          :const Text(
             "Add",
             style: TextStyle(
                 color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
