@@ -2,17 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:notes_app/constants.dart';
 
 class CustomTextField extends StatelessWidget {
-   CustomTextField({super.key, required this.hint, this.maxLines=1});
+    CustomTextField({super.key, required this.hint, this.maxLines=1, @required this.onSaved});
   final String hint;
   final int maxLines;
- //dynamic name;
+   void Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-     //   onSaved:(value){
-      //    name = value;
-      //  } ,
-      maxLines: maxLines,
+        onSaved : onSaved ,
+         maxLines: maxLines,
       cursorColor: kPrimaryColor,
       decoration: InputDecoration(
       

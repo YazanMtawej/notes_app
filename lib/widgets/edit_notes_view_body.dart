@@ -3,7 +3,8 @@ import 'package:notes_app/widgets/custom_app_bar.dart';
 import 'package:notes_app/widgets/cutom_text_field.dart';
 
 class EditNotesViewBody extends StatelessWidget {
-  const EditNotesViewBody({super.key});
+  EditNotesViewBody({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +23,13 @@ class EditNotesViewBody extends StatelessWidget {
             height: 50,
           ),
           CustomTextField(
-            hint: 'Title'),
+            
+              hint: 'Title'),
           const SizedBox(
             height: 16,
           ),
           CustomTextField(
+        
             hint: 'Content',
             maxLines: 5,
           )
