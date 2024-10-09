@@ -37,7 +37,9 @@ final NoteModel notes;
                         fontSize: 18, color: Colors.black.withOpacity(.5))),
               ),
               trailing: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    notes.delete();
+                  },
                   icon: const Icon(
                     FontAwesomeIcons.trash,
                     color: Colors.black,
