@@ -13,7 +13,9 @@ final NoteModel notes;
     return GestureDetector(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder: (context){
-          return const EditNotesView();
+          return  EditNotesView(
+            notes: notes,
+          );
         }));
       },
       child: Container(
