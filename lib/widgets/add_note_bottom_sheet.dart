@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_app/cubit/add_note_cuibt/add_note_cubit.dart';
+import 'package:notes_app/cubit/add_note_cuibt/notes_cubit/notes_cubit.dart';
 import 'package:notes_app/widgets/add_note_form.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
@@ -16,6 +17,7 @@ class AddNoteBottomSheet extends StatelessWidget {
           print('failied   ${state.errMessage}');
         }
         if (state is AddNoteFailure) {
+          BlocProvider.of<NotesCubit>(context).fetchAlNotes();
           Navigator.pop(context);
         }
         // TODO: implement listener
