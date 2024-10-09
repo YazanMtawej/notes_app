@@ -9,15 +9,13 @@ import 'package:notes_app/widgets/cutom_text_field.dart';
 
 class AddNoteForm extends StatefulWidget {
   const AddNoteForm({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   State<StatefulWidget> createState() => _AddNoteFormState();
 }
 
-@override
-State<AddNoteForm> createState() => _AddNoteFormState();
 
 class _AddNoteFormState extends State<AddNoteForm> {
   final GlobalKey<FormState> formKey = GlobalKey();
@@ -55,7 +53,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
             const SizedBox(
               height: 32,
             ),
-          ColorsListView(),
+          const ColorsListView(),
+             const SizedBox(
+              height: 32,
+            ),
             
             BlocBuilder<AddNoteCubit, AddNoteState>(
               builder: (context, state) {
