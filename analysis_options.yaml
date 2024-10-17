@@ -9,7 +9,7 @@
 # packages, and plugins designed to encourage good coding practices.
 analyzer:
   errors:
-    no_logic_in_create_state: ignore ignore
+    no_logic_in_create_state: ignore 
 include: package:flutter_lints/flutter.yaml
 
 linter:

@@ -16,7 +16,6 @@ class AddNoteForm extends StatefulWidget {
   State<StatefulWidget> createState() => _AddNoteFormState();
 }
 
-
 class _AddNoteFormState extends State<AddNoteForm> {
   final GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
@@ -51,11 +50,10 @@ class _AddNoteFormState extends State<AddNoteForm> {
             const SizedBox(
               height: 32,
             ),
-          const ColorsListView(),
-             const SizedBox(
+            const ColorsListView(),
+            const SizedBox(
               height: 32,
             ),
-            
             BlocBuilder<AddNoteCubit, AddNoteState>(
               builder: (context, state) {
                 return CustomButton(

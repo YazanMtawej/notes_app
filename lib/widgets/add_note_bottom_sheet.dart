@@ -13,14 +13,13 @@ class AddNoteBottomSheet extends StatelessWidget {
       create: (context) => AddNoteCubit(),
       child:
           BlocConsumer<AddNoteCubit, AddNoteState>(listener: (context, state) {
-        if (state is AddNoteFailure) {
-          print('failied   ${state.errMessage}');
-        }
-        if (state is AddNoteFailure) {
+        if (state is AddNoteFailure) {}
+
+        if (state is AddNoteSuccess) {
           BlocProvider.of<NotesCubit>(context).fetchAlNotes();
           Navigator.pop(context);
         }
-        // TODO: implement listener
+        
       }, builder: (context, state) {
         return AbsorbPointer(
           absorbing: state is AddNoteLoding ? true : false,
